@@ -1,0 +1,736 @@
+    <title>Alejandro Raponi - Porfolio Academico</title>
+</head>
+<style>
+  
+/* SECCION CONTACTO */
+
+.contacto-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.contacto-enlaces a {
+    display: inline-block;
+    background-color: #20B8B0;
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contacto-enlaces a:hover {
+    background-color: #183B56;
+    transform: translateY(-3px);
+}
+
+/* Diseño general del portafolio */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #F4F8FA;
+    color: #183B56;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #20B8B0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #168EAA;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #183B56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+  
+/* Encabezado del portafolio */
+
+header {
+    background-color: #62C5E8;
+    color: #183B56;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Menu de navegacion */
+
+nav {
+    background-color: #20B8B0;
+    text-align: center;
+    padding: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #183B56;
+}
+
+.contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 2px solid #62C5E8;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.tarjeta h3 {
+    color: #168EAA;
+}
+
+.tarjeta p {
+    color: #183B56;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .contenedor-proyectos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 2px solid #62C5E8;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.tarjeta h3 {
+    color: #168EAA;
+}
+
+@media (max-width: 600px) {
+    .contenedor-proyectos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.imagen-proyecto {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.imagen-proyecto {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #F0FBFC;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* Tamaño uniforme para el carrusel */
+
+.carrusel {
+    width: 100%;
+    max-width: 900px;
+    margin: 25px auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carrusel img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    background-color: #F0FBFC;
+    border-radius: 12px;
+}
+
+/* Mostrar una sola imagen del carrusel */
+
+.carrusel .diapositiva {
+    display: none;
+}
+
+.carrusel .diapositiva.activa {
+    display: block;
+}
+
+/* Flechas del carrusel */
+
+.carrusel .controles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.carrusel .controles button {
+    background-color: #20B8B0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.carrusel .controles button:hover {
+    background-color: #183B56;
+}
+
+/* ADAPTACION PARA CELULARES */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        margin: 0;
+    }
+
+    header {
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .contenedor-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-proyecto {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .carrusel img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .contacto-enlaces {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contacto-enlaces a {
+        text-align: center;
+    }
+
+}
+
+/* NUEVO DISEÑO DEL PORFOLIO */
+
+/* Fondo general con degradado */
+body {
+    background: linear-gradient(
+        135deg,
+        #EAF6FA 0%,
+        #D5EDF4 50%,
+        #F4F8FA 100%
+    );
+    color: #183B56;
+}
+
+/* Encabezado moderno */
+header {
+    background: linear-gradient(
+        120deg,
+        #102F4B,
+        #167D99,
+        #20B8B0
+    );
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+    color: white;
+}
+
+/* Secciones con profundidad */
+section {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(16, 47, 75, 0.12);
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 12px 30px rgba(16, 47, 75, 0.18);
+}
+
+/* Tarjetas de proyectos */
+.tarjeta {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* DETALLES PROFESIONALES DEL PORFOLIO */
+
+/* Titulos de las secciones */
+section h2 {
+    color: #168EAA;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+/* Linea decorativa debajo de los titulos */
+section h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #20B8B0,
+        #62C5E8
+    );
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+/* Animacion del menu */
+nav a {
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #183B56;
+    color: white;
+}
+
+/* Mejor presentacion de las tarjetas */
+.tarjeta {
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 18px rgba(16, 47, 75, 0.12);
+    padding: 18px;
+}
+
+.tarjeta h3 {
+    color: #168EAA;
+}
+
+/* Detalle en las fotografias */
+.imagen-proyecto {
+    border-radius: 10px;
+}
+
+/* Pie de pagina */
+footer {
+    background: linear-gradient(
+        90deg,
+        #102F4B,
+        #183B56
+    );
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Raponi - Portafolio</title>
+</head>
+<body>
+
+    <header>
+        <h1>Alejandro Raponi</h1>
+        <p>Tecnico Superior en Diseño,Imagen y Sonido</p>
+                
+    </header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#radio">Radio</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+
+
+    <main>
+        <section>
+            <h2>Bienvenidos a mi portafolio</h2>
+            <p>
+                Soy estudiante de tercer año de la
+                Tecnicatura Superior en Diseño, Imagen y Sonido
+                del Instituto Superior N.º 26 de Dolores.
+            </p>
+
+
+<section id="sobre-mi">
+    <h2>Sobre mí</h2>
+
+    <h3>Hola, soy Alejandro Raponi</h3>
+
+    <p>
+        Soy estudiante de tercer año de la
+        Tecnicatura Superior en Diseño, Imagen y Sonido
+        del ISFDyT N.º 26 de Dolores, Buenos Aires.
+    </p>
+
+<div class="carrusel">
+
+    <div class="diapositiva activa">
+        <img src="./img/carrusel/carrusel0.jfif" alt="Imagen 1">
+    </div>
+
+    <div class="diapositiva">
+        <img src="./img/carrusel/carrusel01.jpeg" alt="Imagen 2">
+    </div>
+
+    <div class="diapositiva">
+        <img src="./img/carrusel/carrusel02.jpg" alt="Imagen 3">
+    </div>
+
+    <div class="diapositiva">
+        <img src="./img/carrusel/carrusel03.jpg" alt="Imagen 4">
+    </div>
+
+    <div class="diapositiva">
+        <img src="./img/carrusel/carrusel04.jpg" alt="Imagen 5">
+    </div>
+
+    <div class="diapositiva">
+        <img src="./img/carrusel/carrusel05.jpg" alt="Imagen 6">
+    </div>
+
+    <div class="diapositiva">
+        <img src="./img/carrusel/carrusel06.jpg" alt="Imagen 7">
+    </div>
+
+    <div class="diapositiva">
+        <img src="./img/carrusel/carrusel07.jpg" alt="Imagen 8">
+    </div>
+
+    <div class="controles">
+        <button type="button" onclick="cambiarImagen(-1)">&#10094;</button>
+        <button type="button" onclick="cambiarImagen(1)">&#10095;</button>
+    </div>
+
+</div>
+
+    <p>
+        Trabajo en Radio Municipal Dolores FM 100.1,
+        donde participo en la producción, programación
+        y comunicación radial.
+    </p>
+
+    <p>
+        Me apasionan el diseño gráfico, la producción
+        audiovisual, la comunicación visual y la
+        creación de contenidos digitales.
+    </p>
+
+    <p>
+        Mi objetivo es seguir desarrollándome
+        profesionalmente y compartir mis proyectos
+        y experiencias.
+    </p>
+
+</section>
+
+       
+<
+<section id="proyectos">
+
+<section id="radio">
+
+    <h2>Mi experiencia en Radio</h2>
+
+    <h3>Radio Municipal Dolores FM 100.1</h3>
+
+    <p>
+        Desde octubre de 2014 formo parte de
+        Radio Municipal Dolores FM 100.1,
+        conocida como La Cien Dolores.
+    </p>
+
+    <p>
+        Mi experiencia comprende la producción
+        de contenidos radiales, operación técnica,
+        artística, comunicación y participación
+        en diferentes propuestas de programación.
+    </p>
+
+    <h3>Producción y programación</h3>
+
+    <p>
+        Participo en la realización de contenidos
+        informativos, musicales y culturales,
+        combinando la comunicación radial
+        con herramientas audiovisuales y digitales.
+    </p>
+
+    <h3>Talleres de Radio</h3>
+
+    <p>
+        También desarrollo actividades de formación
+        a través de talleres de radio, donde
+        trabajamos locución, entrevistas,
+        producción de programas, lectura de noticias
+        y operación técnica.
+    </p>
+
+    <p>
+        Considero que la radio es una herramienta
+        fundamental para comunicar, aprender,
+        compartir experiencias y fortalecer
+        el vínculo con la comunidad.
+    </p>
+
+</section>
+
+
+    <h2>Mis proyectos</h2>
+
+    <div class="contenedor-proyectos">
+
+        <div class="tarjeta">
+            <h3>DK Pintura Automotor</h3>
+
+
+
+<img src="./img/dk/dk01.png" alt="Trabajo de DK Pintura Automotor" class="imagen-proyecto">
+
+                Campaña publicitaria para una empresa
+                de pintura automotor de Dolores.
+                Diseño de piezas gráficas y
+                comunicación digital.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Radio Municipal Dolores</h3>
+<img src="./img/radio/radio01.jpeg" alt="Radio Municipal Dolores FM 100.1" class="imagen-proyecto">
+
+
+            <p>
+                Producción de programas radiales,
+                separadores, entrevistas y contenidos
+                para FM 100.1 La Cien Dolores.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Portal Digital ON AIR</h3>
+
+<img src="./img/onair/onair01.jpeg" alt="Portal Digital ON AIR" class="imagen-proyecto">
+
+            <p>
+                Diseño de un portal digital,
+                identidad visual, estructura web
+                y contenidos multimedia.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Producción audiovisual</h3>
+
+<img src="./img/audiovisual/audiovisual01.jpg" alt="Proyecto de producción audiovisual de Alejandro Raponi" class="imagen-proyecto">
+
+            <p>
+                Realización de documentales,
+                guiones, grabaciones y edición
+                de imagen y sonido.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contacto">
+
+    <h2>Contacto</h2>
+
+    <p>
+        Si querés conocer más sobre mis proyectos,
+        propuestas audiovisuales, diseño gráfico,
+        producción radial o comunicación digital,
+        podés contactarme a través de los
+        siguientes medios.
+    </p>
+
+    <div class="contacto-enlaces">
+
+        <a href="https://wa.me/542245401357"
+           target="_blank"
+           rel="noopener noreferrer">
+            WhatsApp: 2245 401357
+        </a>
+
+        <a href="mailto:apuropulzo@gmail.com">
+            Correo electrónico
+        </a>
+
+        <a href="https://www.instagram.com/alejandro_raponi80/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Instagram
+        </a>
+
+        <a href="https://www.tiktok.com/@alejandroraponi"
+           target="_blank"
+           rel="noopener noreferrer">
+            TikTok
+        </a>
+
+        <a href="https://x.com/Artevisualsonoro"
+           target="_blank"
+           rel="noopener noreferrer">
+            X (Twitter)
+        </a>
+
+    </div>
+
+    <p>
+        Dolores, Provincia de Buenos Aires,
+        Argentina.
+    </p>
+
+
+</section>
+
+
+    </main>
+
+    <footer>
+        <p>Alejandro Raponi - Dolores, Buenos Aires</p>
+    </footer>
+
+<script>
+    let imagenActual = 0;
+
+    const diapositivas = document.querySelectorAll(
+        ".carrusel .diapositiva"
+    );
+
+    function mostrarImagen(numero) {
+        if (diapositivas.length === 0) return;
+
+        diapositivas.forEach(function(diapositiva) {
+            diapositiva.classList.remove("activa");
+        });
+
+        imagenActual =
+            (numero + diapositivas.length) % diapositivas.length;
+
+        diapositivas[imagenActual].classList.add("activa");
+    }
+
+    function cambiarImagen(direccion) {
+        mostrarImagen(imagenActual + direccion);
+    }
+
+    // Cambio automatico cada 5 segundos
+    setInterval(function() {
+        cambiarImagen(1);
+    }, 5000);
+
+</script>
+
+</body>
