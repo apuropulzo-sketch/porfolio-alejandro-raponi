@@ -1,437 +1,10 @@
-    <title>Alejandro Raponi - Porfolio Academico</title>
-</head>
-<style>
-  
-/* SECCION CONTACTO */
-
-.contacto-enlaces {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.contacto-enlaces a {
-    display: inline-block;
-    background-color: #20B8B0;
-    color: white;
-    text-decoration: none;
-    padding: 14px 22px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.contacto-enlaces a:hover {
-    background-color: #183B56;
-    transform: translateY(-3px);
-}
-
-/* Diseño general del portafolio */
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background-color: #F4F8FA;
-    color: #183B56;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 20px;
-}
-
-section {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    border-left: 5px solid #20B8B0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-h2 {
-    color: #168EAA;
-    margin-top: 0;
-}
-
-footer {
-    background-color: #183B56;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-@media (max-width: 600px) {
-    main {
-        padding: 15px;
-    }
-
-    section {
-        padding: 20px;
-    }
-}
-  
-/* Encabezado del portafolio */
-
-header {
-    background-color: #62C5E8;
-    color: #183B56;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-header h1 {
-    font-size: 40px;
-    margin: 0;
-}
-
-header p {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* Menu de navegacion */
-
-nav {
-    background-color: #20B8B0;
-    text-align: center;
-    padding: 18px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
-    display: inline-block;
-}
-
-nav a:hover {
-    color: #183B56;
-}
-
-.contenedor-proyectos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.tarjeta {
-    background-color: white;
-    border: 2px solid #62C5E8;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.tarjeta h3 {
-    color: #168EAA;
-}
-
-.tarjeta p {
-    color: #183B56;
-}
-
-/* Adaptación para celulares */
-@media (max-width: 600px) {
-    .contenedor-proyectos {
-        grid-template-columns: 1fr;
-    }
-}
-
-.contenedor-proyectos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.tarjeta {
-    background-color: white;
-    border: 2px solid #62C5E8;
-    border-radius: 12px;
-    padding: 20px;
-}
-
-.tarjeta h3 {
-    color: #168EAA;
-}
-
-@media (max-width: 600px) {
-    .contenedor-proyectos {
-        grid-template-columns: 1fr;
-    }
-}
-
-.imagen-proyecto {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-.imagen-proyecto {
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    background-color: #F0FBFC;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-/* Tamaño uniforme para el carrusel */
-
-.carrusel {
-    width: 100%;
-    max-width: 900px;
-    margin: 25px auto;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.carrusel img {
-    display: block;
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-    background-color: #F0FBFC;
-    border-radius: 12px;
-}
-
-/* Mostrar una sola imagen del carrusel */
-
-.carrusel .diapositiva {
-    display: none;
-}
-
-.carrusel .diapositiva.activa {
-    display: block;
-}
-
-/* Flechas del carrusel */
-
-.carrusel .controles {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.carrusel .controles button {
-    background-color: #20B8B0;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.carrusel .controles button:hover {
-    background-color: #183B56;
-}
-
-/* ADAPTACION PARA CELULARES */
-
-@media screen and (max-width: 768px) {
-
-    body {
-        margin: 0;
-    }
-
-    header {
-        padding: 25px 15px;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    nav {
-        text-align: center;
-    }
-
-    nav a {
-        display: inline-block;
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    section {
-        padding: 20px 15px;
-    }
-
-    .contenedor-proyectos {
-        grid-template-columns: 1fr;
-    }
-
-    .imagen-proyecto {
-        width: 100%;
-        height: 250px;
-        object-fit: contain;
-    }
-
-    .carrusel img {
-        width: 100%;
-        height: 250px;
-        object-fit: contain;
-    }
-
-    .contacto-enlaces {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .contacto-enlaces a {
-        text-align: center;
-    }
-
-}
-
-/* NUEVO DISEÑO DEL PORFOLIO */
-
-/* Fondo general con degradado */
-body {
-    background: linear-gradient(
-        135deg,
-        #EAF6FA 0%,
-        #D5EDF4 50%,
-        #F4F8FA 100%
-    );
-    color: #183B56;
-}
-
-/* Encabezado moderno */
-header {
-    background: linear-gradient(
-        120deg,
-        #102F4B,
-        #167D99,
-        #20B8B0
-    );
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
-    border-radius: 0 0 20px 20px;
-}
-
-header h1 {
-    color: white;
-}
-
-/* Secciones con profundidad */
-section {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(16, 47, 75, 0.12);
-    margin-bottom: 30px;
-    transition: box-shadow 0.3s ease;
-}
-
-section:hover {
-    box-shadow: 0 12px 30px rgba(16, 47, 75, 0.18);
-}
-
-/* Tarjetas de proyectos */
-.tarjeta {
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.tarjeta:hover {
-    transform: translateY(-5px);
-}
-
-/* DETALLES PROFESIONALES DEL PORFOLIO */
-
-/* Titulos de las secciones */
-section h2 {
-    color: #168EAA;
-    font-size: 28px;
-    margin-bottom: 25px;
-    padding-bottom: 12px;
-    position: relative;
-}
-
-/* Linea decorativa debajo de los titulos */
-section h2::after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 4px;
-    background: linear-gradient(
-        90deg,
-        #20B8B0,
-        #62C5E8
-    );
-    border-radius: 5px;
-    margin-top: 12px;
-}
-
-/* Animacion del menu */
-nav a {
-    transition: background-color 0.3s ease,
-                color 0.3s ease;
-    border-radius: 6px;
-}
-
-nav a:hover {
-    background-color: #183B56;
-    color: white;
-}
-
-/* Mejor presentacion de las tarjetas */
-.tarjeta {
-    background-color: #FFFFFF;
-    box-shadow: 0 5px 18px rgba(16, 47, 75, 0.12);
-    padding: 18px;
-}
-
-.tarjeta h3 {
-    color: #168EAA;
-}
-
-/* Detalle en las fotografias */
-.imagen-proyecto {
-    border-radius: 10px;
-}
-
-/* Pie de pagina */
-footer {
-    background: linear-gradient(
-        90deg,
-        #102F4B,
-        #183B56
-    );
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-}
-
-</style>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejandro Raponi - Portafolio</title>
+<link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
 
@@ -472,6 +45,30 @@ footer {
         del ISFDyT N.º 26 de Dolores, Buenos Aires.
     </p>
 
+ <p>
+        Trabajo en Radio Municipal Dolores FM 100.1,
+        donde participo en la producción, programación
+        y comunicación radial.
+    </p>
+
+    <p>
+        Me apasionan el diseño gráfico, la producción
+        audiovisual, la comunicación visual y la
+        creación de contenidos digitales.
+    </p>
+
+    <p>
+        Mi objetivo es seguir desarrollándome
+        profesionalmente y compartir mis proyectos
+        y experiencias.
+    </p>
+    
+<h2>Postales de la Ciudad de Dolores</h2>
+
+<p>
+    Un recorrido visual por nuestra ciudad,
+    su historia, su cultura y su identidad.
+</p>
 <div class="carrusel">
 
     <div class="diapositiva activa">
@@ -513,28 +110,12 @@ footer {
 
 </div>
 
-    <p>
-        Trabajo en Radio Municipal Dolores FM 100.1,
-        donde participo en la producción, programación
-        y comunicación radial.
-    </p>
-
-    <p>
-        Me apasionan el diseño gráfico, la producción
-        audiovisual, la comunicación visual y la
-        creación de contenidos digitales.
-    </p>
-
-    <p>
-        Mi objetivo es seguir desarrollándome
-        profesionalmente y compartir mis proyectos
-        y experiencias.
-    </p>
+   
 
 </section>
 
        
-<
+
 <section id="proyectos">
 
 <section id="radio">
@@ -594,9 +175,7 @@ footer {
 
 
 
-
 <img src="./img/dK/dk00.png" alt="Trabajo de DK Pintura Automotor" class="imagen-proyecto">
-
 
                 Campaña publicitaria para una empresa
                 de pintura automotor de Dolores.
@@ -704,35 +283,12 @@ footer {
         <p>Alejandro Raponi - Dolores, Buenos Aires</p>
     </footer>
 
-<script>
-    let imagenActual = 0;
 
-    const diapositivas = document.querySelectorAll(
-        ".carrusel .diapositiva"
-    );
+<script src="./script.js"></script>
 
-    function mostrarImagen(numero) {
-        if (diapositivas.length === 0) return;
 
-        diapositivas.forEach(function(diapositiva) {
-            diapositiva.classList.remove("activa");
-        });
-
-        imagenActual =
-            (numero + diapositivas.length) % diapositivas.length;
-
-        diapositivas[imagenActual].classList.add("activa");
-    }
-
-    function cambiarImagen(direccion) {
-        mostrarImagen(imagenActual + direccion);
-    }
-
-    // Cambio automatico cada 5 segundos
-    setInterval(function() {
-        cambiarImagen(1);
-    }, 5000);
-
-</script>
+<button id="volverArriba" type="button" aria-label="Volver arriba" title="Volver arriba">↑</button>
 
 </body>
+</html>
+
